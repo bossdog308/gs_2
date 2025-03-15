@@ -1,0 +1,105 @@
+/* Optimized Weapon Shop CSS for FiveM NUI */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    /*background: linear-gradient(135deg, #1a1a1a, #333);*/ /*disables nui default overlay */
+    color: white;
+}
+
+#shop-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border: 2px solid #4caf50;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    z-index: 1000;
+    width: 420px;
+    max-height: 550px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+#weapon-list,
+#ammo-list,
+#attachment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#weapon-list li,
+#ammo-list li,
+#attachment-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.3s;
+}
+
+#weapon-list li:hover,
+#ammo-list li:hover,
+#attachment-list li:hover {
+    background: rgba(76, 175, 80, 0.3);
+}
+
+h2, h3 {
+    font-size: 22px;
+    font-weight: bold;
+    background: #222;
+    padding: 12px;
+    margin: 12px 0;
+    border-bottom: 2px solid #4caf50;
+    text-align: center;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: 2px solid #4caf50;
+    border-radius: 15px;
+    background: rgba(76, 175, 80, 0.8);
+    color: white;
+    cursor: pointer;
+    width: auto;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+#alert-box {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4caf50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    display: none;
+    z-index: 1100;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}

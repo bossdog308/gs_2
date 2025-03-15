@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weapon Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="shop-container">
+    <h2>Weapons</h2>
+    <ul id="weapon-list"></ul>
+
+    <h3>Attachments</h3>
+    <ul id="attachment-list"></ul>
+
+    <h2>Ammo</h2>
+    <ul id="ammo-list">
+      <li class="buy-ammo" data-ammo="pistol_ammo">Pistol Ammo - $50</li>
+      <li class="buy-ammo" data-ammo="smg_ammo">SMG Ammo - $100</li>
+      <li class="buy-ammo" data-ammo="rifle_ammo">Rifle Ammo - $150</li>
+      <li class="buy-ammo" data-ammo="shotgun_ammo">Shotgun Ammo - $80</li>
+    </ul>
+
+    <button onclick="closeShop()">Close</button>
+  </div>
+
+  <div id="alert-box" style="display: none;">Weapon Purchased!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
